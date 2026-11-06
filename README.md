@@ -1,7 +1,7 @@
 # Traceable.ThermaVisualizer
 
-![CI](https://github.com/moazelessawey/traceable-thermavisualizer/actions/workflows/ci.yml/badge.svg)
-![Release build](https://github.com/moazelessawey/traceable-thermavisualizer/actions/workflows/release.yml/badge.svg)
+![CI](https://github.com/moazelessawey/Traceable-ThermaVisualizer/actions/workflows/ci.yml/badge.svg)
+![Release build](https://github.com/moazelessawey/Traceable-ThermaVisualizer/actions/workflows/release.yml/badge.svg)
 
 Desktop application (Python 3.11+ / PySide6 / PyVista–OpenGL) for designing,
 loading, visualizing, and exporting thermal mapping (temperature / relative
@@ -15,7 +15,7 @@ the community.
 > actions (who, what, when). It is **not** a 21 CFR Part 11 compliance claim
 > and there are no electronic signatures.
 
-**Status: v1.0.0-rc1** — milestones M0–M7 complete. M8 (PDF report, study
+**Status: v1.0.0** — milestones M0–M7 complete. M8 (PDF report, study
 comparison) is next.
 
 ## Features
