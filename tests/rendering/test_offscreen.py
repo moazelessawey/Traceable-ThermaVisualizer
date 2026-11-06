@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
-import numpy as np
+import os
+import sys
+
 import pytest
+import numpy as np
 
 pytest.importorskip("pyvista")
 
@@ -12,6 +15,12 @@ from thermavisualizer.core.models import BoxFootprint, Quantity, Space
 from thermavisualizer.rendering.offscreen import render_movie_frames
 from thermavisualizer.services.workers import MovieJob
 
+
+pytestmark = pytest.mark.skipif(
+    sys.platform == "win32" and os.environ.get("CI", "").lower() in ("true", "1"),
+    reason="OpenGL rendering is unavailable on Windows CI runners (no GPU); "
+           "these smoke tests run locally and on Ubuntu CI",
+)
 
 def test_render_movie_frames_smoke() -> None:
     times = np.datetime64("2024-03-01T08:00", "ns") + np.arange(2) * np.timedelta64(60, "s")

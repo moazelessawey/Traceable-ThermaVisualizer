@@ -8,6 +8,9 @@ from pytestqt.qtbot import QtBot
 pytest.importorskip("pyvista")
 pytest.importorskip("pyvistaqt")
 
+import os
+import sys
+
 import numpy as np
 
 from thermavisualizer.core.models import (
@@ -27,6 +30,12 @@ from thermavisualizer.core.slicing import SliceAxis, extract_axis_slice
 # Acceptance item 10 preview: an L-shaped footprint, not a box.
 L_SHAPE = PolygonFootprint(((0.0, 0.0), (4.0, 0.0), (4.0, 2.0), (2.0, 2.0), (2.0, 4.0), (0.0, 4.0)))
 
+
+pytestmark = pytest.mark.skipif(
+    sys.platform == "win32" and os.environ.get("CI", "").lower() in ("true", "1"),
+    reason="OpenGL rendering is unavailable on Windows CI runners (no GPU); "
+           "these smoke tests run locally and on Ubuntu CI",
+)
 
 def test_pyvista_scene_smoke(qtbot: QtBot) -> None:
     try:
