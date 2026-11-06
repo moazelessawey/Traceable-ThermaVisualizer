@@ -2,6 +2,9 @@
 
 ![CI](https://github.com/moazelessawey/Traceable-ThermaVisualizer/actions/workflows/ci.yml/badge.svg)
 ![Release build](https://github.com/moazelessawey/Traceable-ThermaVisualizer/actions/workflows/release.yml/badge.svg)
+![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg)
 
 Desktop application (Python 3.11+ / PySide6 / PyVista–OpenGL) for designing,
 loading, visualizing, and exporting thermal mapping (temperature / relative
