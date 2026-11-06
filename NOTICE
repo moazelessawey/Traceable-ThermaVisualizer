@@ -1,0 +1,11 @@
+Traceable.ThermaVisualizer
+Copyright 2026 Moaz El-Essawey
+
+This product is an open-source community tool for visualizing thermal mapping
+studies. It is distributed under the Apache License, Version 2.0.
+
+The built-in audit trail is a lightweight record of user actions. It is NOT a
+21 CFR Part 11 compliance feature and no electronic signatures are provided.
+
+This product bundles Qt (via PySide6, LGPL) and other open-source libraries;
+see pyproject.toml for the full dependency list and their respective licenses.

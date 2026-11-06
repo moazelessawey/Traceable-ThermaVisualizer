@@ -1,0 +1,74 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thermavisualizer"
+version = "1.0.0"
+description = "Traceable.ThermaVisualizer: 3D visualization of thermal mapping studies"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Moaz El-Essawey" }]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3.11",
+]
+# PRD section 3. The 3D backend (pyqtgraph vs PyVista) is intentionally NOT
+# added yet: PRD open question 6 defers it to the M0 spike decision.
+dependencies = [
+    "PySide6>=6.6",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "openpyxl>=3.1",
+    "pyarrow>=14",
+    "scikit-image>=0.22",
+    "imageio>=2.33",
+    "imageio-ffmpeg>=0.5",
+    "pyvista>=0.45",
+    "pyvistaqt>=0.11",
+    "xlrd>=2.0,<3",
+    "reportlab>=4.0,<5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-qt>=4.4",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "pyinstaller>=6.0,<7",
+]
+
+[project.gui-scripts]
+thermavisualizer = "thermavisualizer.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/thermavisualizer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+addopts = "-p no:warnings"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[[tool.mypy.overrides]]
+module = "skimage.*"
+ignore_missing_imports = true

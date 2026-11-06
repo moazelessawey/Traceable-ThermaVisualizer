@@ -1,0 +1,6 @@
+ID,X,Y,Z,Layer,Notes
+L1,0.5,0.5,0.5,low,
+L1,2.5,0.5,0.5,low,duplicate id
+,0.5,2.5,0.5,low,missing id
+L3,abc,2.5,0.5,low,bad number
+L4,2.5,,0.5,low,missing y

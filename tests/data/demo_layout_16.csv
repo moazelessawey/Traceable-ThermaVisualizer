@@ -1,0 +1,17 @@
+ID,X,Y,Z,Layer,Notes
+L01,0.5,0.5,0.5,lower,corner
+L02,2.0,0.5,0.5,lower,
+L03,3.5,0.5,0.5,lower,near door
+L04,5.0,0.5,0.5,lower,corner
+L05,0.5,3.5,0.5,lower,
+L06,2.0,3.5,0.5,lower,
+L07,3.5,3.5,0.5,lower,near evaporator
+L08,5.0,3.5,0.5,lower,corner
+L09,0.5,0.5,2.0,upper,corner
+L10,2.0,0.5,2.0,upper,
+L11,3.5,0.5,2.0,upper,near door
+L12,5.0,0.5,2.0,upper,corner
+L13,0.5,3.5,2.0,upper,
+L14,2.0,3.5,2.0,upper,
+L15,3.5,3.5,2.0,upper,near evaporator
+L16,5.0,3.5,2.0,upper,corner

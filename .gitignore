@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+pycache/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Packaging / release outputs
+*.zip
+dist/
+build/
+
+# Local editor/tooling noise
+.vscode/
+.idea/
+
+# Local project files and autosaves
+*.tmap
+*.autosave
